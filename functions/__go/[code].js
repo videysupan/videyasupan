@@ -1,5 +1,5 @@
 const links = {
-  1: "https://www.alodokter.com",
+  1: "https://cdn.videy.co/K3Nl3Vnj1.mp4",
   2: "https://www.halodoc.com",
   3: "https://hellosehat.com"
 };
