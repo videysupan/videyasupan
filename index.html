@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your link is ready. Continue to your destination.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Your Link Is Ready</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(99, 102, 241, 0.10), transparent 35%),
+        #f7f8fc;
+      color: #111827;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .header {
+      width: 100%;
+      padding: 24px 20px;
+    }
+
+    .brand {
+      max-width: 1100px;
+      margin: 0 auto;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #111827;
+    }
+
+    .brand span {
+      opacity: 0.45;
+      font-weight: 500;
+    }
+
+    .main {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px 60px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(17, 24, 39, 0.07);
+      border-radius: 24px;
+      padding: 38px 28px;
+      text-align: center;
+      box-shadow:
+        0 20px 60px rgba(17, 24, 39, 0.08),
+        0 4px 12px rgba(17, 24, 39, 0.04);
+    }
+
+    .icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 24px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #111827;
+      color: #ffffff;
+      font-size: 26px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(17, 24, 39, 0.16);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 7vw, 40px);
+      line-height: 1.15;
+      letter-spacing: -1.2px;
+    }
+
+    .description {
+      max-width: 410px;
+      margin: 16px auto 0;
+      color: #6b7280;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .code-box {
+      margin: 26px 0 22px;
+      padding: 13px 16px;
+      background: #f3f4f6;
+      border-radius: 12px;
+      color: #4b5563;
+      font-size: 13px;
+      word-break: break-all;
+    }
+
+    .code-box strong {
+      color: #111827;
+    }
+
+    .progress-wrapper {
+      margin: 24px 0 26px;
+    }
+
+    .progress-background {
+      width: 100%;
+      height: 7px;
+      overflow: hidden;
+      background: #e5e7eb;
+      border-radius: 999px;
+    }
+
+    .progress-bar {
+      width: 0%;
+      height: 100%;
+      background: #111827;
+      border-radius: 999px;
+      transition: width 0.08s linear;
+    }
+
+    .progress-text {
+      margin-top: 10px;
+      color: #6b7280;
+      font-size: 13px;
+    }
+
+    .continue-button {
+      display: flex;
+      width: 100%;
+      min-height: 54px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: #111827;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.1px;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+      box-shadow: 0 10px 25px rgba(17, 24, 39, 0.16);
+    }
+
+    .continue-button.disabled {
+      pointer-events: none;
+      opacity: 0.45;
+      box-shadow: none;
+    }
+
+    .continue-button:not(.disabled):hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(17, 24, 39, 0.20);
+    }
+
+    .continue-button:not(.disabled):active {
+      transform: translateY(0);
+    }
+
+    .small-note {
+      margin-top: 17px;
+      color: #9ca3af;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .footer {
+      padding: 20px;
+      text-align: center;
+      color: #9ca3af;
+      font-size: 12px;
+    }
+
+    @media (min-width: 640px) {
+      .card {
+        padding: 48px 42px;
+      }
+
+      .header {
+        padding: 28px 30px;
+      }
+
+      .main {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="brand">
+      Link<span>Portal</span>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- LINK PAGE -->
+    <section id="linkCard" class="card">
+
+      <div class="icon">↗</div>
+
+      <h1>Your Link Is Ready</h1>
+
+      <p class="description">
+        Click the button below to continue to your destination.
+      </p>
+
+      <div class="code-box">
+        Link code:
+        <strong id="codeDisplay">...</strong>
+      </div>
+
+      <div class="progress-wrapper">
+
+        <div class="progress-background">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+
+        <div id="progressText" class="progress-text">
+          Preparing your link... 0%
+        </div>
+
+      </div>
+
+      <a
+        id="continueButton"
+        class="continue-button disabled"
+        href="#"
+        rel="nofollow"
+      >
+        CONTINUE
+      </a>
+
+      <div class="small-note">
+        Please wait a moment while your link is prepared.
+      </div>
+
+    </section>
+
+
+    <!-- HOME PAGE -->
+    <section id="homeCard" class="card hidden">
+
+      <div class="icon">↗</div>
+
+      <h1>Welcome</h1>
+
+      <p class="description">
+        Please open a valid link to continue to your destination.
+      </p>
+
+    </section>
+
+
+    <!-- ERROR PAGE -->
+    <section id="errorCard" class="card hidden">
+
+      <div class="icon">!</div>
+
+      <h1>Link Not Available</h1>
+
+      <p class="description">
+        The link you requested is unavailable or may have expired.
+      </p>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> LinkPortal. All rights reserved.
+  </footer>
+
+
+  <noscript>
+    <div style="
+      position:fixed;
+      inset:0;
+      background:#ffffff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:30px;
+      text-align:center;
+      font-family:Arial,sans-serif;
+      z-index:9999;
+    ">
+      JavaScript is required to continue.
+    </div>
+  </noscript>
+
+
+  <script>
+    (() => {
+      "use strict";
+
+      /*
+       * Get the code from the current URL.
+       *
+       * Example:
+       * /abcde
+       * /abcdef
+       * /xyz123
+       */
+      const code =
+        window.location.pathname
+          .replace(/^\/+/, "")
+          .replace(/\/+$/, "");
+
+      const linkCard = document.getElementById("linkCard");
+      const homeCard = document.getElementById("homeCard");
+      const errorCard = document.getElementById("errorCard");
+
+      const codeDisplay = document.getElementById("codeDisplay");
+      const continueButton =
+        document.getElementById("continueButton");
+
+      const progressBar =
+        document.getElementById("progressBar");
+
+      const progressText =
+        document.getElementById("progressText");
+
+      const year =
+        document.getElementById("year");
+
+
+      /*
+       * Current year
+       */
+      year.textContent = new Date().getFullYear();
+
+
+      /*
+       * If visitor opens the root domain:
+       *
+       * https://videyasupan.pages.dev/
+       *
+       * show Welcome page.
+       */
+      if (!code) {
+        linkCard.classList.add("hidden");
+        homeCard.classList.remove("hidden");
+        return;
+      }
+
+
+      /*
+       * Only allow simple link codes.
+       *
+       * Allowed:
+       * abcde
+       * abc123
+       * abc-123
+       * abc_123
+       */
+      if (!/^[A-Za-z0-9_-]+$/.test(code)) {
+        linkCard.classList.add("hidden");
+        errorCard.classList.remove("hidden");
+        return;
+      }
+
+
+      /*
+       * Display the current code.
+       */
+      codeDisplay.textContent = code;
+
+
+      /*
+       * IMPORTANT:
+       *
+       * The real destination URL is NOT stored
+       * in this HTML.
+       *
+       * The button only sends the code to:
+       *
+       * /__go/abcde
+       *
+       * The Cloudflare Pages Function will then
+       * determine the real destination.
+       */
+      continueButton.href =
+        "/__go/" + encodeURIComponent(code);
+
+
+      /*
+       * Progress animation
+       */
+      let progress = 0;
+
+      const duration = 850;
+      const start = performance.now();
+
+
+      function animate(time) {
+
+        const elapsed = time - start;
+
+        progress = Math.min(
+          100,
+          Math.round((elapsed / duration) * 100)
+        );
+
+
+        progressBar.style.width =
+          progress + "%";
+
+
+        if (progress < 100) {
+
+          progressText.textContent =
+            "Preparing your link... " +
+            progress +
+            "%";
+
+        } else {
+
+          progressText.textContent =
+            "Your link is ready.";
+
+          continueButton.classList.remove(
+            "disabled"
+          );
+        }
+
+
+        if (progress < 100) {
+          requestAnimationFrame(animate);
+        }
+      }
+
+
+      requestAnimationFrame(animate);
+
+    })();
+  </script>
+
+</body>
+</html>
