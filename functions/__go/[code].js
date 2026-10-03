@@ -1,7 +1,7 @@
 const links = {
-  abcde: "https://www.alodokter.com",
-  abcdef: "https://www.halodoc.com",
-  xyz123: "https://hellosehat.com"
+  1: "https://www.alodokter.com",
+  2: "https://www.halodoc.com",
+  3: "https://hellosehat.com"
 };
 
 export function onRequestGet(context) {
