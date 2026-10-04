@@ -1,7 +1,8 @@
 const links = {
   1: "https://cdn.videy.co/K3Nl3Vnj1.mp4",
   2: "https://cdn.videy.co/wReDbco71.mp4",
-  3: "https://hellosehat.com"
+  3: "https://cdn.videy.co/mWW6dJSe1.mp4",
+  4: "x"
 };
 
 export function onRequestGet(context) {
