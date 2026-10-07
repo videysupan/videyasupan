@@ -26,7 +26,8 @@ const links = {
   25: "https://cdn.videy.co/iSQ4hobt1.mp4",
   26: "https://cdn.videy.co/ud9KG6Hd1.mp4",
   27: "https://cdn.videy.co/0Hulvtkm1.mp4",
-  28: "https://cdn.videy.co/cR58cqo91.mp4"
+  28: "https://cdn.videy.co/cR58cqo91.mp4",
+  29: "https://cdn.videy.co/AF2QhiWl1.mp4"
 };
 
 export function onRequestGet(context) {
