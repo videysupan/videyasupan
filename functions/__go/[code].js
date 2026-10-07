@@ -39,7 +39,9 @@ const links = {
   38: "https://cdn.videy.co/7Hh6S0hs1.mp4",
   39: "https://cdn.videy.co/RnEZxgS81.mp4",
   40: "https://cdn.videy.co/6v4S0bwQ1.mp4",
-  41: "https://cdn.videy.co/Eq71jkvi1.mp4"
+  41: "https://cdn.videy.co/Eq71jkvi1.mp4",
+  42: "https://cdn.videy.co/npoOCP991.mp4",
+  43: "https://cdn.videy.co/546K5xsp1.mp4"
 };
 
 export function onRequestGet(context) {
