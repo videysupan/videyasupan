@@ -1,4 +1,5 @@
 const links = {
+  50: "https://cdn.videy.co/wug01znc1.mp4",
   49: "https://cdn.videy.co/dIi9zalx1.mp4",
   48: "https://cdn.videy.co/Jde0ldCy1.mp4",
   47: "https://cdn.videy.co/UwPq9TnE1.mp4",
